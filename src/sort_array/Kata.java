@@ -24,7 +24,6 @@ public class Kata {
                                 array[n] = array[m];
                                 array[m] = temp;
                             }
-                            break;
                         }
                     }
                 }
