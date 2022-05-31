@@ -1,7 +1,7 @@
 package fold_an_array;
 
 // Сложить правые от центра элементы массива с левыми от центра. Пример:
-//        * Один круг
+//        * 1 runs
 //        * [1,2,3,4,5] -> [6,6,3]
 //        *
 //        * A little visualization (NOT for the algorithm but for the idea of folding):
@@ -13,7 +13,7 @@ package fold_an_array;
 //        * ----*----      ----*          ----*        ----*        ----*
 //        *
 //        *
-//        * Два круга
+//        * 2 runs
 //        * [1,2,3,4,5] -> [9,6]
 
 import java.util.Arrays;
