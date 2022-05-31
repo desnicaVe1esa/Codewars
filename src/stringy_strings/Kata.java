@@ -1,4 +1,4 @@
-package stringy_sntrings;
+package stringy_strings;
 
 // Принимает число-размер строки и выводит строку с чередованием единицы и нуля
 
