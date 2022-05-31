@@ -12,19 +12,12 @@ public class Kata {
     }
 
     public static int[] sortArray(int[] array) {
-        int i;
-        int n;
-        int m;
-        int temp = 0;
-        if (array.length < 2) {
-            System.out.println(Arrays.toString(array));
-            return array;
-        }
 
-        for (i = 0; i < array.length; i++) {
-            for (n = 0; n < array.length; n++) {
+        int temp = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int n = 0; n < array.length; n++) {
                 if (array[n] % 2 != 0) {
-                    for (m = n + 1; m < array.length; m++) {
+                    for (int m = n + 1; m < array.length; m++) {
                         if (array[m] % 2 != 0) {
                             if (array[n] > array[m]) {
                                 temp = array[n];
