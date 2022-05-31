@@ -32,4 +32,3 @@ public class Kata {
         return f.length == 1 | runs == 1 ? f : foldArray(f, --runs);
     }
 }
-
