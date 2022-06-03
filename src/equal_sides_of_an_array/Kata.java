@@ -11,6 +11,7 @@ public class Kata {
         System.out.println(findEvenIndex(array));
     }
 
+// Через стримы
     public static int findEvenIndex(int[] arr) {
         return IntStream.range(0, arr.length)
                 .mapToObj(i -> new int[]{Arrays.stream(arr)
@@ -23,3 +24,22 @@ public class Kata {
     }
 }
 
+// Через циклы
+//    public static int findEvenIndex(int[] arr) {
+//        int sumOfLeftSide = 0;
+//        int sumOfRightSide = 0;
+//        int result = 0;
+//        for (int i = 0; i < arr.length; i++) {
+//            sumOfLeftSide += arr[i];
+//            for (int j = arr.length - 1; j >= 0; j--) {
+//                sumOfRightSide += arr[j];
+//                if (sumOfLeftSide == sumOfRightSide && i + 2 == j) {
+//                    result = i + 1;
+//                    break;
+//                } else if (j == 0) {
+//                    sumOfRightSide = 0;
+//                }
+//            }
+//        }
+//        return result == 0 ? -1 : result;
+//    }
