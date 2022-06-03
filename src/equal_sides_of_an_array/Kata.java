@@ -7,11 +7,11 @@ import java.util.stream.IntStream;
 
 public class Kata {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6};
+        int[] array = {1,100,50,-51,1,1};
         System.out.println(findEvenIndex(array));
     }
 
-// Через стримы
+    // Через стримы
     public static int findEvenIndex(int[] arr) {
         return IntStream.range(0, arr.length)
                 .mapToObj(i -> new int[]{Arrays.stream(arr)
@@ -24,7 +24,7 @@ public class Kata {
     }
 }
 
-// Через циклы
+    // Через циклы
 //    public static int findEvenIndex(int[] arr) {
 //        int sumOfLeftSide = 0;
 //        int sumOfRightSide = 0;
@@ -35,7 +35,6 @@ public class Kata {
 //                sumOfRightSide += arr[j];
 //                if (sumOfLeftSide == sumOfRightSide && i + 2 == j) {
 //                    result = i + 1;
-//                    break;
 //                } else if (j == 0) {
 //                    sumOfRightSide = 0;
 //                }
@@ -43,3 +42,4 @@ public class Kata {
 //        }
 //        return result == 0 ? -1 : result;
 //    }
+//}
