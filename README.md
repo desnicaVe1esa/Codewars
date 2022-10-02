@@ -1,1 +1,1 @@
-Задачи с сайта https://www.codewars.com/dashboard
+Задачи с сайта https://www.codewars.com
