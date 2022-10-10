@@ -7,8 +7,6 @@ M
 .src/convert_string_to_camel_case/Solution.java,4\a\4a6e340ac2fc9174f3ea29e1ecf889df78152f8f
 S
 #src/build_a_pile_of_cubes/ASum.java,6\e\6e0dabdbed150e673e14adc29906dffdbeca7761
-Q
-!src/create_phone_number/Kata.java,3\0\30e65617fd3cd202b6744cff6506c72710ab74f1
 L
 src/buying_a_car/BuyCar.java,2\b\2bad7a0c6c7b737cbfa87122a0afc840ea6f6eeb
 Q
