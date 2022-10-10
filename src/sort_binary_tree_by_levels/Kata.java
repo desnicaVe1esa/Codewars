@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+// Cортировка бинарного дерева в ширину
+
 class Kata {
     public static void main(String[] args) {
         System.out.println(Kata.treeByLevels(new Node
