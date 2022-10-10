@@ -9,8 +9,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-
-
 /**
  * Напишите функцию, которая, задавая строку текста (возможно, с пунктуацией и разрывами строк),
  * возвращает массив топ-3 наиболее встречающихся слов в порядке убывания числа вхождений.
