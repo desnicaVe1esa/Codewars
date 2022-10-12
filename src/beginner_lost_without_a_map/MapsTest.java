@@ -11,3 +11,5 @@ public class MapsTest {
         assertArrayEquals(new int[] {2, 2, 2, 2, 2, 2}, Maps.map(new int[] {1, 1, 1, 1, 1, 1}));
     }
 }
+
+
