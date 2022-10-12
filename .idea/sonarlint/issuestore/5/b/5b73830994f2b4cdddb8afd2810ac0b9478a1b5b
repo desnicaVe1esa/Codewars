@@ -1,0 +1,5 @@
+
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(–¹ºüÿÿÿÿ
+o	java:S100T"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êˆùşÿÿÿÿ8¬š˜…¼0
+o
+java:S6204b"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹8®š˜…¼0
