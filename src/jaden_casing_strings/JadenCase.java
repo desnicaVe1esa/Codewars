@@ -3,7 +3,7 @@ package jaden_casing_strings;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-// Приводит первую букву слова к верхнему регистру
+// РџСЂРёРІРѕРґРёС‚ РїРµСЂРІСѓСЋ Р±СѓРєРІСѓ СЃР»РѕРІР° Рє РІРµСЂС…РЅРµРјСѓ СЂРµРіРёСЃС‚СЂСѓ
 
 public class JadenCase {
 
