@@ -1,6 +1,6 @@
 package beginner_lost_without_a_map;
 
-// Прибавляет к элементу массива число равное самому себе
+// РџСЂРёР±Р°РІР»СЏРµС‚ Рє СЌР»РµРјРµРЅС‚Сѓ РјР°СЃСЃРёРІР° С‡РёСЃР»Рѕ СЂР°РІРЅРѕРµ СЃР°РјРѕРјСѓ СЃРµР±Рµ
 
 public class Maps {
     public static void main(String[] args) {
