@@ -2,7 +2,8 @@ package find_the_smallest_integer_in_the_array;
 
 import java.util.Arrays;
 
-// Возвращает наименьшее число в массиве
+// Р’РѕР·РІСЂР°С‰Р°РµС‚ РЅР°РёРјРµРЅСЊС€РµРµ С‡РёСЃР»Рѕ РІ РјР°СЃСЃРёРІРµ
+
 public class SmallestIntegerFinder {
 
     public static int findSmallestInt(int[] args) {
