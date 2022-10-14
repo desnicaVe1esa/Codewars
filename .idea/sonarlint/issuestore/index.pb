@@ -51,3 +51,19 @@ M
 src/stringy_strings/Kata.java,c\a\ca2b314e9f4e13a6d9aa17e46e20fbf4f194ad88
 f
 6src/most_frequently_used_words_in_a_text/TopWords.java,5\b\5b73830994f2b4cdddb8afd2810ac0b9478a1b5b
+R
+"src/string_ends_with/KataTest.java,f\6\f652269d79332075c4f779e86ffb4da3f969a231
+N
+src/string_ends_with/Kata.java,c\c\cc918ea519be13935f09275550711f1de9b5b698
+V
+&src/simple_pig_latin/PigLatinTest.java,a\4\a426298422efbbcc9540f36ea4edfe546649ffd0
+R
+"src/simple_pig_latin/PigLatin.java,9\c\9cb0c17c759fd23c2af569dbb3f9bb1f50291c6a
+u
+Esrc/find_the_smallest_integer_in_the_array/SmallestIntegerFinder.java,7\3\731792d45d89e8216f49900db77549fe09876678
+y
+Isrc/find_the_smallest_integer_in_the_array/SmallestIntegerFinderTest.java,7\f\7fd1bfa09865a64f14e4e30b98dcec2c8daef32e
+Z
+*src/is_this_a_triangle/TriangleTester.java,3\8\38c510a6459dbd2f1f2ebf465b527d2e9d517a77
+^
+.src/is_this_a_triangle/TriangleTesterTest.java,c\a\ca02c2235a138477be14dc934e6f371d52fad3aa
