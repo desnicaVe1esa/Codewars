@@ -79,3 +79,7 @@ f
 6src/most_frequently_used_words_in_a_text/TopWords.java,5\b\5b73830994f2b4cdddb8afd2810ac0b9478a1b5b
 c
 3src/simple_encryption_1_alternating_split/Kata.java,8\5\85320a5e62a3c14f1f484cb148a68a5421d5cd89
+_
+/src/opposites_attract/OppositesAttractTest.java,a\b\ab82962bb3f99463e86fd83b30fbe45c1ee0b33b
+[
++src/opposites_attract/OppositesAttract.java,d\b\db9293c8bd52177624c2ff20e54fd89d2e135f41
