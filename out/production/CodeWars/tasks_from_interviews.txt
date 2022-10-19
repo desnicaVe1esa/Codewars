@@ -1,0 +1,53 @@
+Возведение в степень X^Y, X и Y целые, Y неотрицательное
+
+    int power(int x, int y) {
+        return (int) Math.pow(x, y);
+
+        Рекурсия
+           if (y == 0) {
+               return 1;
+           } else {
+               return x * power(x, y - 1);
+           }
+    }
+
+
+Преобразовать List<String> в List<Integer> заменив каждую строку ее длиной
+
+    List<String> list = List.of("alpha", "beta", "gamma");
+    List<Integer> listInt = new ArrayList<>();
+    for (String s : list) {
+        s.length();
+        listInt.add(Integer.valueOf(s));
+    }
+
+    Через стрим
+    listInt.stream().map(String::length).collect(Collectors.toList());
+
+
+Написать функцию сложения
+
+    <E extends Number> double sumValues(Collection<E> list) {
+        double result = 0.0;
+        for (E d : list) {
+            result += (double)d;
+        }
+        return result;
+    }
+
+
+Чем equals() отличается от операции ==
+Возможна ли ситуация, когда (ref0 == ref1) и ref0.equals(ref1) == false?
+
+    В общем случае - возможна, если метод equals() реализован некорректно и не выполняет свойство рефлексивности:
+    для любых ненулевых ссылок x метод x.equals(x) должен возвращать true.
+
+
+SQL: дана таблица курсов валют T(Date dt, Double rate) с данными
+    01.07.2022 60
+    03.07.2022 55
+    07.07.2022 57
+    10.07.2022 63
+необходимо найти курс на заданную дату
+
+    select rate from T where dt = (select max(date) from T where date <= :dt)
