@@ -21,8 +21,6 @@ U
 %src/equal_sides_of_an_array/Kata.java,7\7\778a64f1504c4adb435f48c54f080715cf31fbcb
 I
 .idea/libraries/junit.xml,5\f\5fa4102ba67640fe0217e262a5ab06ea6679872f
-<
-CodeWars.iml,0\3\03341c0d9890294d0c256fff5d545546e9982634
 K
 src/fold_an_array/Kata.java,9\a\9a651430e3a5bf5ded5a6fd14729099515afc6e6
 _
@@ -67,8 +65,6 @@ W
 'src/the_highest_profit_wins/MinMax.java,b\6\b6d85061257639d50befe7386a523a281cce7366
 M
 src/stringy_strings/Kata.java,c\a\ca2b314e9f4e13a6d9aa17e46e20fbf4f194ad88
-U
-%src/string_reverse/StringReverse.java,a\8\a8475e995b2ffdb4486cfabae1f86ec59257d087
 J
 src/string_merge/Kata.java,3\f\3ff2040f2c381e2af13f4c1b62e3960fc47bc44d
 N
