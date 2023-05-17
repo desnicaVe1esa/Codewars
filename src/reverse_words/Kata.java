@@ -1,14 +1,14 @@
 package reverse_words;
 
-import org.junit.platform.commons.util.StringUtils;
+//import org.junit.platform.commons.util.StringUtils;
 
 // Переворачивает каждое слово в предложении
 
 public class Kata {
     public static String reverseWords(final String original) {
-        if (original.length() == 0 || StringUtils.isBlank(original)) {
-            return original;
-        }
+//        if (original.length() == 0 || StringUtils.isBlank(original)) {
+//            return original;
+//        }
         String[] words = original.split(" ");
         StringBuilder result = new StringBuilder();
         for (String s : words) {
