@@ -9,7 +9,7 @@ public class DescendingOrder {
     public static int sortDesc(final int num) {
         String numToString = String.valueOf(num);
         int[] arr = new int[numToString.length()];
-        String s = "";
+        StringBuilder s = new StringBuilder();
         for (int i = 0; i < numToString.length(); i++) {
             arr[i] = Integer.parseInt(numToString.charAt(i) + "");
         }
@@ -29,8 +29,8 @@ public class DescendingOrder {
             }
         }
         for (int i = 0; i < numToString.length(); i++) {
-            s = s + arr[i];
+            s.append(arr[i]);
         }
-        return Integer.parseInt(s);
+        return Integer.parseInt(s.toString());
     }
 }
