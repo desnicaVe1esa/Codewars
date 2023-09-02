@@ -5,7 +5,7 @@ import org.junit.Test;
 import static intervals.Interval.sumIntervals;
 import static org.junit.Assert.assertEquals;
 
-public class IntervalTest {
+public class HammingTest {
 
     @Test
     public void shouldHandleEmptyIntervals() {
