@@ -7,7 +7,7 @@ public class KataTest {
 
     @Test
     public void evenTests() {
-        assertEquals("es", Kata.getMiddle("test"));
+        assertEquals("es", Kata.getMiddle("you_can't_code_under_pressure _1"));
         assertEquals("dd", Kata.getMiddle("middle"));
     }
 
