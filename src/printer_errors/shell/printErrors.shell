@@ -1,0 +1,14 @@
+printerError() {
+  input_string="$1"
+  error_count=0
+  valid_chars="abcdefghijklm"
+
+  for char in $(echo "$input_string" | fold -w1); do
+    if [[ "$valid_chars" != *"$char"* ]]; then
+      error_count=$((error_count + 1))
+    fi
+  done
+
+  echo "$error_count/$((${#input_string}))"
+}
+printerError $1
