@@ -1,0 +1,6 @@
+#!/bin/bash
+longest () {
+    chars=$1$2
+    echo $chars | grep -o . | sort | uniq | tr -d '\n'
+}
+longest "$1" "$2"
