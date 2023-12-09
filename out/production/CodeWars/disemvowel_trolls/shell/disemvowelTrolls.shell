@@ -1,0 +1,8 @@
+#!/bin/bash
+
+trolls() {
+    string=$1
+    echo $string | sed 's/[aeiouAEIOU]//g'
+}
+
+trolls "$1"
