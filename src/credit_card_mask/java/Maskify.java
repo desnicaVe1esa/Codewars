@@ -6,7 +6,7 @@ public class Maskify {
         int j = 1;
         for (int i = chars.length - 1; i >= 0; i--) {
             if (j > 4) {
-                chars[i] ='#';
+                chars[i] = '#';
             }
             j++;
         }

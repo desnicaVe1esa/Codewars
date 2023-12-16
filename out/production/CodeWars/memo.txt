@@ -1,1 +1,0 @@
-npm install mocha chai --save-dev - установка библиотеки chai для тестирования js;
