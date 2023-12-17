@@ -15,7 +15,7 @@ public class GraphTest {
     Vertex[] V = new Vertex[]{new Vertex(), new Vertex(), new Vertex(), new Vertex(), new Vertex(), new Vertex()};
 
     @Before
-    public void setUpSmallExampleGraph(){
+    public void setUpSmallExampleGraph() {
         exampleGraph = new Graph();
         /*
          *      V[2] - V[0] - V[3] - V[4]    V[5]
@@ -27,7 +27,7 @@ public class GraphTest {
     }
 
     @Test
-    public void testNeighboursExample(){
+    public void testNeighboursExample() {
         Set<Vertex> actualNeighbours;
 
         actualNeighbours = GraphOperations.getNeighbours(exampleGraph, V[0]);
