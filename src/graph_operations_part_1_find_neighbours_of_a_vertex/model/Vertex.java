@@ -6,7 +6,7 @@ package graph_operations_part_1_find_neighbours_of_a_vertex.model;
 public class Vertex {
     private final int uid;
 
-    public Vertex(){
+    public Vertex() {
         uid = Graph.getUidForNode();
     }
 
@@ -20,5 +20,7 @@ public class Vertex {
     }
 
     @Override
-    public int hashCode() { return uid; }
+    public int hashCode() {
+        return uid;
+    }
 }
