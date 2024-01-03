@@ -18,7 +18,6 @@ class FactDecomp {
                 }
             }
         }
-        System.out.println(primeCountMap);
         List<String> primeFactors = new ArrayList<>();
         for (int prime : primeCountMap.keySet()) {
             int count = primeCountMap.get(prime);
