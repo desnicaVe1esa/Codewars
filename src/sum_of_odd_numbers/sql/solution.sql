@@ -1,0 +1,1 @@
+select power(n, 3)::integer as res from nums
