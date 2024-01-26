@@ -4,11 +4,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PigLatin {
-
+//    1) first way:
 //    public String translate(String str) {
 //        return (str = str.toLowerCase()).matches("[aeiou][a-z]*") ? str + "way" : str.matches("[a-z]*") ? str.replaceAll("^([^aeiou]*)(.*)", "$2$1ay") : null;
 //    }
 
+//    2) twice way:
     public String translate(String str){
         if (str == null) return null;
 
