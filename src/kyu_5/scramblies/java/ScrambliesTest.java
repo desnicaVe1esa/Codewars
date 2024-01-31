@@ -1,6 +1,5 @@
 package kyu_5.scramblies.java;
 
-import kyu_5.scramblies.java.Scramblies;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
