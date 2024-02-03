@@ -5,4 +5,4 @@ git config --global core.autocrlf false отключает автоматиче�
 и проверках кода. Это может быть полезно, если вы работаете на разных операционных системах, где используются различные
 символы новой строки.
 При ошибке (warning: in the working copy of 'src/kyu_8/is_n_divisible_by_x_and_y/java/MyFile.java', LF will be replaced
-by CRLF the next time Git touches it)
+by CRLF the next time Git touches it);
