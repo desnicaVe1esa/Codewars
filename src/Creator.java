@@ -28,6 +28,7 @@ public class Creator {
             String line;
             while ((line = br.readLine()) != null) {
                 data.append(line);
+                //Сюда можно добавить ЯП, которые нужны
                 Pattern patternLanguages = Pattern.compile("(icon-moon-javascript|icon-moon-sql|icon-moon-groovy)");
                 Matcher matcherLanguages = patternLanguages.matcher(line);
                 if (matcherLanguages.find()) {
