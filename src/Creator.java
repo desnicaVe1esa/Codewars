@@ -2,19 +2,18 @@ import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * Создает папки с названием задачи, папки с названиями ЯП, на которых ее можно решить
- * и дефолтные классы с тестами для начала решения
+ * и дефолтные классы с тестами для начала решения.
  */
 
 public class Creator {
     public static void main(String[] args) throws IOException {
-        //Поле для URL с задачей на уже выбранном языке (у меня дефолт Java)
+        //Добавить URL с задачей на уже выбранном языке (у меня дефолт Java)
         String urlData = "https://www.codewars.com/kata/5545f109004975ea66000086/train/java";
         URL url = new URL(urlData);
         URLConnection con = url.openConnection();
@@ -27,8 +26,9 @@ public class Creator {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
             String line;
             while ((line = br.readLine()) != null) {
+                System.out.println(line);
                 data.append(line);
-                //Сюда можно добавить ЯП, которые нужны
+                //Добавить ЯП, которые нужны
                 Pattern patternLanguages = Pattern.compile("(icon-moon-javascript|icon-moon-sql|icon-moon-groovy)");
                 Matcher matcherLanguages = patternLanguages.matcher(line);
                 if (matcherLanguages.find()) {
@@ -83,7 +83,7 @@ public class Creator {
                 case "8 kyu" -> {
                     File folderJava = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_8", title + "\\java");
                     //TODO разработать пиздатый fileContent
-                    createFile(folderJava.toString(), "MyFile.java", "package kyu_8.is_n_divisible_by_x_and_y.java;\n\npublic class MyFile {\n\t// File content here\n}");
+                    createFile(folderJava.toString(), "MyFile.java", "package kyu_8." + title + ".java;\n\npublic class MyFile {\n\t// File content here\n}");
                     for (String check : languages) {
                         if (check.contains("javascript")) {
                             File folderSql = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_8", title + "\\js");
