@@ -45,7 +45,7 @@ public class Creator {
 
         if (matcherKyu.find() && matcherTitle.find()) {
             String kyu = matcherKyu.group(1);
-            //Пока хуй знет как поймать только одно название задачи, поэтому вот такое говно
+            //TODO Пока хуй знет как поймать только одно название задачи, поэтому вот такое говно
             String title = matcherTitle.group(1).split("<")[0].toLowerCase().replaceAll("[ ?]", "_");
             //Проверка на наличие в конце строки символа, который не является буквой
             if (!Character.isLetter(title.length() - 1)) {
@@ -82,7 +82,8 @@ public class Creator {
                 }
                 case "8 kyu" -> {
                     File folderJava = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_8", title + "\\java");
-                    createFile(folderJava.toString(), "MyFile.java", "public class MyFile {\n\t// File content here\n}");
+                    //TODO разработать пиздатый fileContent
+                    createFile(folderJava.toString(), "MyFile.java", "package kyu_8.is_n_divisible_by_x_and_y.java;\n\npublic class MyFile {\n\t// File content here\n}");
                     for (String check : languages) {
                         if (check.contains("javascript")) {
                             File folderSql = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_8", title + "\\js");
@@ -100,6 +101,7 @@ public class Creator {
         }
     }
 
+    //Создает классы и тесты в папке
     public static void createFile(String folderPath, String fileName, String fileContent) {
         try {
             File folder = new File(folderPath);
