@@ -3,6 +3,6 @@ npm install mocha chai --save-dev - установка библиотеки chai
 git config --global core.autocrlf false отключает автоматическое преобразование символов новой строки (CRLF)
 при работе с Git. При установке значения "false", Git не будет автоматически изменять символы новой строки при коммитах
 и проверках кода. Это может быть полезно, если вы работаете на разных операционных системах, где используются различные
- символы новой строки.
- При ошибке (warning: in the working copy of 'src/kyu_8/is_n_divisible_by_x_and_y/java/MyFile.java', LF will be replaced
- by CRLF the next time Git touches it)
+символы новой строки.
+При ошибке (warning: in the working copy of 'src/kyu_8/is_n_divisible_by_x_and_y/java/MyFile.java', LF will be replaced
+by CRLF the next time Git touches it)
