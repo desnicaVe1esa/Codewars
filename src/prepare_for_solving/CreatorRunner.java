@@ -7,8 +7,9 @@ import java.io.IOException;
  */
 public class CreatorRunner {
     public static void main(String[] args) throws IOException {
-        //Добавить URL с задачей на уже выбранном языке (у меня дефолт Java)
-        String url = "https://www.codewars.com/kata/5545f109004975ea66000086/train/java";
+        //Добавить в 'challenge' ID или название задачи
+        String challenge = "5545f109004975ea66000086";
+        String url = "https://www.codewars.com/api/v1/code-challenges/" + challenge;
         Creator creator = new Creator();
         creator.start(url);
     }

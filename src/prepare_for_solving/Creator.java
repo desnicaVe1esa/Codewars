@@ -1,12 +1,15 @@
 package prepare_for_solving;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.io.*;
+import java.lang.reflect.Type;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Stream;
 
 /**
  * Создает папки с названием задачи, папки с названиями ЯП, на которых ее можно решить
@@ -14,6 +17,9 @@ import java.util.regex.Pattern;
  */
 
 public class Creator {
+
+    //Указать свой путь
+    private final String PATH = "C:\\Users\\seera\\IdeaProjects\\Codewars\\src";
     public Creator() {
     }
 
@@ -32,78 +38,70 @@ public class Creator {
         URLConnection con = tasksUrl.openConnection();
         InputStream is = con.getInputStream();
         //Контейнер для содержимого URL
-        StringBuilder data = new StringBuilder();
-        //Контейнер для ЯП, на которых можно решить задачу
-        Set<String> languages = new HashSet<>();
+        StringBuilder json = new StringBuilder();
 
         try (BufferedReader br = new BufferedReader(new InputStreamReader(is))) {
             String line;
             while ((line = br.readLine()) != null) {
-                data.append(line);
-                //Добавить ЯП, которые нужны
-                Pattern patternLanguages = Pattern.compile("(icon-moon-javascript|icon-moon-sql|icon-moon-groovy)");
-                Matcher matcherLanguages = patternLanguages.matcher(line);
-                if (matcherLanguages.find()) {
-                    String language = matcherLanguages.group(1);
-                    languages.add(language);
-                }
+                json.append(line);
             }
         }
-        System.out.println(data);
-        Pattern patternKyu = Pattern.compile("<span>(\\d kyu)</span>");
-        Pattern patternTitle = Pattern.compile("<h4 class=\"ml-2 mb-3\">(.*)</h4>");
-        Matcher matcherKyu = patternKyu.matcher(data.toString());
-        Matcher matcherTitle = patternTitle.matcher(data.toString());
+        Gson gson = new Gson();
+        Type type = new TypeToken<Map<String, Object>>(){}.getType();
+        Map<String, Object> data = gson.fromJson(json.toString(), type);
+        String languages = data.get("languages").toString();
+        //Контейнер для ЯП, на которых можно решить задачу (добавить в фильтр нужные ЯП)
+        //Разработан для содания папок под ЯП
+        List<String> listLanguages = Stream.of(languages.substring(1, languages.length() - 1).split(",")).filter(f ->
+                        f.contains("java") ||
+                        f.contains("javascript") ||
+                        f.contains("groovy") ||
+                        f.contains("sql")).toList();
 
-        if (matcherKyu.find() && matcherTitle.find()) {
-            String kyu = matcherKyu.group(1);
-            //TODO Пока хуй знет, как поймать только одно название задачи, поэтому вот такое говно
-            String title = matcherTitle.group(1).split("<")[0].toLowerCase().replaceAll("[ ?]", "_").trim();
-            //Проверка на наличие в конце строки символа, который не является буквой
-            if (!Character.isLetter(title.length() - 1)) {
-                title = title.substring(0, title.length() - 1).trim();
-            }
-            //Прописать свой путь
+        String title = data.get("slug").toString().replaceAll("-","_");
+        String rank = data.get("rank").toString();
+        String kyu = rank.substring(rank.indexOf("name=") + 5, rank.indexOf(", color"));
+
             switch (kyu) {
-                case "1 kyu" -> {
-                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_1", title);
-                    folder.mkdirs();
-                }
-                case "2 kyu" -> {
-                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_2", title);
-                    folder.mkdirs();
-                }
-                case "3 kyu" -> {
-                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_3", title);
-                    folder.mkdirs();
-                }
-                case "4 kyu" -> {
-                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_4", title);
-                    folder.mkdirs();
-                }
-                case "5 kyu" -> {
-                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_5", title);
-                    folder.mkdirs();
-                }
-                case "6 kyu" -> {
-                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_6", title);
-                    folder.mkdirs();
-                }
-                case "7 kyu" -> {
-                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_7", title);
-                    folder.mkdirs();
-                }
+//                case "1 kyu" -> {
+//                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_1", title);
+//                    folder.mkdirs();
+//                }
+//                case "2 kyu" -> {
+//                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_2", title);
+//                    folder.mkdirs();
+//                }
+//                case "3 kyu" -> {
+//                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_3", title);
+//                    folder.mkdirs();
+//                }
+//                case "4 kyu" -> {
+//                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_4", title);
+//                    folder.mkdirs();
+//                }
+//                case "5 kyu" -> {
+//                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_5", title);
+//                    folder.mkdirs();
+//                }
+//                case "6 kyu" -> {
+//                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_6", title);
+//                    folder.mkdirs();
+//                }
+//                case "7 kyu" -> {
+//                    File folder = new File("C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_7", title);
+//                    folder.mkdirs();
+//                }
                 case "8 kyu" ->
                     //TODO разработать пиздатый fileContent
-                        foldersFilesCodeCreator(languages, "C:\\Users\\seera\\IdeaProjects\\Codewars\\src\\kyu_8\\" + title, kyu, title/*"MyFile.java"*/);
+                        foldersFilesCodeCreator(listLanguages, PATH + "\\kyu_8\\" + title, kyu, title/*"MyFile.java"*/);
             }
         }
-    }
+
 
     /**
      * Подготовка папок, файлов и стартового кода для решения задачи
      */
-    public void foldersFilesCodeCreator(Set<String> languages, String folderPath, String kyu, String title) {
+    public void foldersFilesCodeCreator(List<String> languages, String folderPath, String kyu, String title) {
 
         try {
             File folder = new File(folderPath + "\\java");
