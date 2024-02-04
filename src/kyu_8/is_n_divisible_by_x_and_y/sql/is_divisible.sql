@@ -1,0 +1,1 @@
+select id, case when n % x = 0  AND n % y = 0 then true else false end as res from kata;
