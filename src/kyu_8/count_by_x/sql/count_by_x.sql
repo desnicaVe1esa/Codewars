@@ -1,0 +1,1 @@
+select *, array(select * from generate_series(x, x * n, x)) res from counter order by 1,2
