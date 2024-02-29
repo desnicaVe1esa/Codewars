@@ -1,0 +1,7 @@
+package kyu_8.easy_logs.java;
+
+public class EasyLogs {
+    public static double logs(double x, double a, double b) {
+        return (Math.log(a) / Math.log(x)) + (Math.log(b) / Math.log(x));
+    }
+}
