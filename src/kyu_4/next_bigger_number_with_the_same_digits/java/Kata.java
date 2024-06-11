@@ -1,0 +1,37 @@
+package kyu_4.next_bigger_number_with_the_same_digits.java;
+
+
+import java.util.Arrays;
+
+public class Kata {
+    public static long nextBiggerNumber(long n) {
+        String numStr = String.valueOf(n);
+        char[] numChars = numStr.toCharArray();
+        int pivotIndex;
+        for (pivotIndex = numChars.length - 1; pivotIndex > 0; pivotIndex--) {
+            if (numChars[pivotIndex] > numChars[pivotIndex - 1]) {
+                break;
+            }
+        }
+        if (pivotIndex == 0) {
+            return -1;
+        }
+        int pivot = numChars[pivotIndex - 1];
+        int minIndex = pivotIndex;
+
+        for (int j = pivotIndex + 1; j < numChars.length; j++) {
+            if (numChars[j] > pivot && numChars[j] < numChars[minIndex]) {
+                minIndex = j;
+            }
+        }
+        swap(numChars, pivotIndex - 1, minIndex);
+        Arrays.sort(numChars, pivotIndex, numChars.length);
+        return Long.parseLong(new String(numChars));
+    }
+
+    public static void swap(char[] numChars, int i, int j) {
+        char temp = numChars[i];
+        numChars[i] = numChars[j];
+        numChars[j] = temp;
+    }
+}
