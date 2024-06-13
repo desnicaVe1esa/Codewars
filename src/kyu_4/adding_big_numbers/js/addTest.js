@@ -1,4 +1,5 @@
 const add = require("./add");
+const Test = require("./add");
 
 describe("Add two numbers", function(){
     it("should pass basic tests", function() {
