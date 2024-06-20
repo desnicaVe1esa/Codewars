@@ -6,8 +6,9 @@ public class Dinglemouse {
         StringBuilder result = new StringBuilder();
         int max = -1;
         for (int i : results) {
-            if (i > max)
+            if (i > max) {
                 max = i;
+            }
             max++;
         }
         while (max > 0) {
@@ -15,15 +16,17 @@ public class Dinglemouse {
             for (int i = 0; i < 6; i++) {
                 if (results[i] == max - 1 && results[i] > 0) {
                     line.append(results[i]);
-                    if (results[i] < 10)
+                    if (results[i] < 10) {
                         line.append(" ");
+                    }
                 } else {
                     line.append(results[i] >= max ? "# " : "  ");
                 }
             }
             line = new StringBuilder(line.toString().replaceAll("( )+$", ""));
-            if (line.length() > 0)
+            if (line.length() > 0) {
                 result.append(line).append("\n");
+            }
             max--;
         }
         result.append("-----------\n");
