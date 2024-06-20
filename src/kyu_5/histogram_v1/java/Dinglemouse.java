@@ -5,10 +5,11 @@ public class Dinglemouse {
     public static String histogram(final int[] results) {
         StringBuilder result = new StringBuilder();
         int max = -1;
-        for (int i : results)
+        for (int i : results) {
             if (i > max)
                 max = i;
-        max++;
+            max++;
+        }
         while (max > 0) {
             StringBuilder line = new StringBuilder();
             for (int i = 0; i < 6; i++) {
