@@ -1,0 +1,24 @@
+def testing(s, t, exp)
+    # transform each array into string
+    s = s.join(","); t = t.join(",")
+
+    print("testing: ", s, ", ", t, "\n")
+    print("expected: ", exp, "\n")
+    test1 = (run_shell args: [s, t]).to_i
+    expect(test1).to eq(exp)
+end
+
+describe("mxdiflg") do
+    it("Basic tests") do
+        s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
+        s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+        testing(s1, s2, 13)
+
+        s = ""
+        t = ""
+        print("testing: s1, s2 empty \n")
+        print("expected: ", -1, "\n")
+        test1 = (run_shell args: [s, t]).to_i
+        expect(test1).to eq(-1)
+  end
+end

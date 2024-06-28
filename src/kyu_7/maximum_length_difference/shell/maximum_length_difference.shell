@@ -1,0 +1,25 @@
+#!/bin/bash
+# input : 2 strings with substrings separated by `,`
+# output: number as a string
+a1=$1
+a2=$2
+
+# check inputs
+[[ -z ${a1} ]] && echo "-1" && exit 1
+[[ -z ${a2} ]] && echo "-1" && exit 1
+
+# functions
+maxLen(){
+  echo "$1" | tr ',' '\n' | awk '{print length}' | sort -nk1 | tail -1
+}
+minLen(){
+  echo "$1" | tr ',' '\n' | awk '{print length}' | sort -nk1 | head -1
+}
+accum () {
+  d1=$(bc <<< $(maxLen "$1")"-"$(minLen "$2"))
+  d2=$(bc <<< $(maxLen "$2")"-"$(minLen "$1"))
+  [[ ${d1#-} -gt ${d2#-} ]] && echo ${d1#-} || echo ${d2#-}
+}
+
+# main
+accum "${a1}" "${a2}"
