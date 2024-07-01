@@ -1,0 +1,18 @@
+def testing(n, exp)
+    print("input   : #{n} \n")
+    if (exp != "Nothing") then
+      exp = exp.join(", ")
+    end
+    print("expected: #{exp} \n")
+    test1 = (run_shell args: [n])
+    expect(test1).to eq(exp)
+end
+
+describe("decompose") do
+    it("Basic tests") do
+        testing(50, [1,3,5,8,49])
+        testing(44, [2,3,5,7,43])
+        testing(4, "Nothing")
+    end
+end
+

@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+set -eu -o pipefail
+
+result=()
+
+result_push () {
+	result=("$1" "${result[@]}")
+}
+
+result_drop() {
+	result=("${result[@]:1}")
+}
+
+decompose () {
+	local remains=$1
+	local maxk=$2
+	((remains != 0)) || return 0
+	local k
+	k=$(bc <<<"sqrt($remains)")
+	((k < maxk)) || ((k = maxk))
+	while ((k > 0)); do
+		result_push "$k"
+		if decompose $((remains - k * k)) $((k - 1)); then
+			return 0
+		fi
+		result_drop
+		((k--))
+	done
+	return 1
+}
+
+if decompose "$(($1 * $1))" $(($1 - 1)); then
+	printf '%s\n' "${result[@]}" | paste -s -d, | sed 's/,/, /g'
+else
+	echo Nothing
+fi
