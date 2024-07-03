@@ -2,7 +2,8 @@
 
 void vaporcode(const char *, char *);
 
-Test(Sample_tests, Tests) {
+Test(Sample_tests, Tests)
+{
   {
     const char a[] = "Let's go to the movies";
     char b[53];
