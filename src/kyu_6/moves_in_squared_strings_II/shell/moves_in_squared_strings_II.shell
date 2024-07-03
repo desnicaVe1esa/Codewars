@@ -1,0 +1,14 @@
+#!/bin/bash
+rot() {
+    echo $1|rev|sed 's/,/\r/g'
+}
+selfieAndRot() {
+    sp=$(echo ${1%%,*}|sed 's/./\./g')
+    str=$(sed "s/,/$sp\r/g" <<< $1)
+    printf "%s%s\r%s%s" $str $sp $sp $(echo $str|rev)
+}
+oper() {
+    [ $1 = 'rot' ] && rot $2
+    [ $1 = 'selfieAndRot' ] && selfieAndRot $2
+}
+oper $1 $2

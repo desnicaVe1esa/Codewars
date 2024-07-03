@@ -1,0 +1,18 @@
+def testing(fct, s, exp)
+    print("testing: ", fct, ", ", s, "\n")
+    test1 = (run_shell args: [fct, s])
+    expect(test1).to eq(exp)
+end
+
+describe("oper") do
+    it("Basic tests rot") do
+        testing("rot", "fijuoo,CqYVct,DrPmMJ,erfpBA,kWjFUG,CVUfyL", "LyfUVC\rGUFjWk\rABpfre\rJMmPrD\rtcVYqC\rooujif")
+        testing("rot", "rkKv,cofM,zXkh,flCB", "BClf\rhkXz\rMfoc\rvKkr")
+    end
+    it("Basic tests selfieAndRot") do
+        testing("selfieAndRot", "xZBV,jsbS,JcpN,fVnP", 
+        "xZBV....\rjsbS....\rJcpN....\rfVnP....\r....PnVf\r....NpcJ\r....Sbsj\r....VBZx")
+        testing("selfieAndRot", "uLcq,JkuL,YirX,nwMB",
+            "uLcq....\rJkuL....\rYirX....\rnwMB....\r....BMwn\r....XriY\r....LukJ\r....qcLu")
+    end
+end
