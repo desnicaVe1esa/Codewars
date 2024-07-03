@@ -5,7 +5,7 @@ std::string vaporcode(const std::string &str)
 {
       std::string result;
 
-      for(int i=0; i < str.size(); i++)
+      for(int i = 0; i < str.size(); i++)
       {
           if(str[i] == ' ') continue;
           result.push_back(std::toupper(str[i]));
