@@ -1,0 +1,2 @@
+--# write your SQL statement here: -- you are given a table 'getsum' with column 'n' (the bounds in SQL translation: 0 <= n <= 10^5)-- return a table with this column and your result in a column named 'res'.
+select n, ((n - n % 2 + 2) * (n - n % 2 + 4) * (n - n % 2 + 3) - (n + n % 2) * (n + n % 2 + 2) * (4 * n + n % 2 * 4 + 7)) / 24 as res from getsum
