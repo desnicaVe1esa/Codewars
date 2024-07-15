@@ -1,0 +1,2 @@
+1
+Describe(Tests){    It(ExampleTests)    {        Assert::That(converter(12), Equals(4.25));        Assert::That(converter(24), Equals(8.50));        Assert::That(converter(36), Equals(12.74));    }};
