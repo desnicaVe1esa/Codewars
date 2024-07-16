@@ -1,0 +1,14 @@
+def tester(d, b, exp)
+  it "d = #{d}, b = #{b}" do
+    expect(run_shell(args: [d, b]).to_f).to be exp.to_f
+  end
+end
+
+describe "Basic tests" do
+  tester(2, 7, 6)
+  tester(3, 10, 9)
+  tester(7, 17, 14)
+  tester(10, 50, 50)
+  tester(37, 200, 185)
+  tester(7, 100, 98)
+end
