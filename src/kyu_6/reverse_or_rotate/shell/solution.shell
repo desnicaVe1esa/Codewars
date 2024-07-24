@@ -1,0 +1,20 @@
+#!/bin/bash
+revrot () {
+    # your code
+    while read -n $2 s;
+    do
+      if [ ${#s} -eq $2 ]; then
+        sum=0;
+        for c in `grep -o . <<< $s`;
+        do
+          sum=$((sum+c**3));
+        done
+        if [ $((sum%2)) -eq 0 ]; then
+          echo -n $s | rev;
+        else
+          echo -n ${s:1}${s:0:1};
+        fi
+      fi
+    done <<< "$1"
+}
+revrot $1 $2
