@@ -1,4 +1,4 @@
-package kyu_2.java;
+package kyu_2.evaluate_mathematical_expression.java;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
