@@ -1,3 +1,5 @@
-1
-function digits(n) {  // TODO}
+function digits(n) {
+    return ("" + n).length;
+}
+
 module.exports = digits;
