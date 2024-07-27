@@ -1,0 +1,11 @@
+def testing(content, evap_per_day, threshold, exp)
+    test1 = (run_shell args: [content, evap_per_day, threshold]).to_i
+    expect(test1).to eq(exp)
+end
+
+describe("evaporator") do
+    it("Basic tests") do
+        testing(10, 10, 10, 22)
+		    testing(10, 10, 5, 29)
+    end
+end
