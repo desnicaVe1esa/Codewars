@@ -1,0 +1,22 @@
+def run_solution(x)
+  run_shell(args: [x]).strip
+end
+
+RSpec.describe("Example tests") do
+  
+  it("Year 2020 is a leap year") do
+      expect(run_solution(2020)).to eq("1")
+  end
+
+  it("Year 2000 is a leap year") do
+      expect(run_solution(2000)).to eq("1")
+  end
+
+  it("Year 2015 is not a leap year") do
+      expect(run_solution(2015)).to eq("0")
+  end
+
+  it("Year 2100 is not a leap year") do
+      expect(run_solution(2100)).to eq("0")
+  end
+end
