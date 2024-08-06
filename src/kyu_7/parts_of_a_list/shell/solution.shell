@@ -1,0 +1,12 @@
+#!/bin/bash
+partlist() {
+    A=($1); j=1; lg=${#A[@]}
+    while [ $j -lt $lg ]; do
+        B="${A[@]:0:j}"
+        C="${A[@]:j}"
+        res="${res}($B,$C)"
+        j=$((j + 1))
+    done
+    echo $res
+}
+partlist "$1"

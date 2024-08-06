@@ -1,0 +1,14 @@
+def testing(s, exp)
+    print("testing s: ", s, "\n")
+    test1 = (run_shell args: [s])
+    expect(test1).to eq(exp)
+end
+
+describe("partlist") do
+    it("Basic tests") do
+        testing("I wish I hadn't come",
+            "(I,wish I hadn't come)(I wish,I hadn't come)(I wish I,hadn't come)(I wish I hadn't,come)")
+        testing("cdIw tzIy xDu rThG",
+            "(cdIw,tzIy xDu rThG)(cdIw tzIy,xDu rThG)(cdIw tzIy xDu,rThG)")
+    end
+end
