@@ -32,11 +32,11 @@ public class MathEvaluatorTest {
         assertEquals(21.25, new MathEvaluator().calculate("2 /2+3 * 4.75- -6"), 0.01);
     }
 
-//    @Test public void testSimple() {
-//        assertEquals(1476d, new MathEvaluator().calculate("12* 123"), 0.01);
-//    }
-//
-//    @Test public void testComplex() {
-//        assertEquals(7.732, new MathEvaluator().calculate("2 / (2 + 3) * 4.33 - -6"), 0.01);
-//    }
+    @Test public void testSimple() {
+        assertEquals(1476d, new MathEvaluator().calculate("12* 123"), 0.01);
+    }
+
+    @Test public void testComplex() {
+        assertEquals(7.732, new MathEvaluator().calculate("2 / (2 + 3) * 4.33 - -6"), 0.01);
+    }
 }
