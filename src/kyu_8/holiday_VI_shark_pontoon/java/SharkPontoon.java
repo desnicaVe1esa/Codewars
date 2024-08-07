@@ -6,7 +6,7 @@ public class SharkPontoon {
         if (dolphin) {
             sharkSpeed *= 0.5;
         }
-        return pontoonDistance / youSpeed <= sharkDistance / sharkSpeed ? "Alive" : "Shark Bait!";
+        return pontoonDistance / youSpeed <= sharkDistance / sharkSpeed ? "Alive!" : "Shark Bait!";
     }
 }
 
