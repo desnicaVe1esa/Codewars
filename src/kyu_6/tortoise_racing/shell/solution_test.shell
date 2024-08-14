@@ -1,0 +1,8 @@
+# run the solution and store its result
+# output = run_shell args: ['my_arg']
+
+# describe "Solution" do
+#   it "should return the argument passed in" do
+#     expect(output).to include('my_arg')
+#   end
+# end

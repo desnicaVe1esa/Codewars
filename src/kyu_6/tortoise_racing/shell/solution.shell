@@ -1,0 +1,11 @@
+#!/bin/bash
+race() {
+    if [ $1 -ge $2 ]; then echo "-1 -1 -1"; exit 1; fi
+    let dv=$2-$1
+    sec=$(echo $3*3600/$dv | bc)
+    h=$(echo $sec/3600 | bc)
+    m=$(echo $sec%3600/60 | bc)
+    s=$(echo $sec%60 | bc)
+    echo "$h $m $s"
+}
+race $1 $2 $3
