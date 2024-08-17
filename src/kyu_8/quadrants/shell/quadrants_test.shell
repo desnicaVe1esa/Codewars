@@ -1,0 +1,13 @@
+def quadrant(x, y)
+  run_shell args: [x, y]
+end
+
+describe "Fixed" do
+  it "Example" do
+    expect(quadrant(1, 2)).to eq("1")
+    expect(quadrant(3, 5)).to eq("1")
+    expect(quadrant(-10, 100)).to eq("2")
+    expect(quadrant(-1, -9)).to eq("3")
+    expect(quadrant(19, -56)).to eq("4")
+  end
+end
