@@ -1,3 +1,4 @@
+const remove = require("./solution");
 const strictEqual = require("chai").assert.strictEqual;
 
 function doTest (input, expected) {
