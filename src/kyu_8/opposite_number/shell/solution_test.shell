@@ -1,0 +1,9 @@
+output1 = run_shell args: [1]
+output2 = run_shell args: [-5]
+
+describe "Solution" do
+  it "should return the opposite of the argument passed in" do
+    expect(output1.chomp).to eq('-1')
+    expect(output2.chomp).to eq('5')
+  end
+end
