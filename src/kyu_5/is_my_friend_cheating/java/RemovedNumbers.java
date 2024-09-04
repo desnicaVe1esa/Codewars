@@ -16,5 +16,4 @@ public class RemovedNumbers {
         }
         return result;
     }
-
 }
