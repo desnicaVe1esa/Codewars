@@ -1,0 +1,11 @@
+def testequal(n, exp)
+    test1 = (run_shell args: [n])
+    expect(test1).to eq(exp)
+end
+
+describe("removeNb") do
+    it("Basic tests") do
+        testequal(26, "15 21,21 15")
+        testequal(100, "")
+    end
+end

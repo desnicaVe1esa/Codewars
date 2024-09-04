@@ -1,0 +1,11 @@
+n=$1
+sum=$( bc <<< "$n*($n+1)/2" )
+for a in `seq 1 $n`
+do
+	let u=sum-a v=a+1 b=u%v
+	if (( b == 0 ))
+	then
+		let c=u/v
+		(( c <= n )) && echo $a $c
+	fi
+done | paste -sd,
