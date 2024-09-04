@@ -1,0 +1,9 @@
+describe "Basic Tests" do
+  it "Basic Test Cases" do
+    expect(run_shell args: [1, 3]).to eq("6")
+    expect(run_shell args: [3, 3]).to eq("4")
+    expect(run_shell args: [2, 3]).to eq("5")
+    expect(run_shell args: [3, 5]).to eq("8")
+    expect(run_shell args: [7, 11]).to eq("16")
+  end
+end
