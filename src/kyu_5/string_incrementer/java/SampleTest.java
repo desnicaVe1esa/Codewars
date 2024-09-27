@@ -14,7 +14,7 @@ public class SampleTest {
 
     @Test
     public void exampleTests() {
-//        doTest("foobar000", "foobar001");
+        doTest("foobar000", "foobar001");
         doTest("foo", "foo1");
         doTest("foobar001", "foobar002");
         doTest("foobar99", "foobar100");
