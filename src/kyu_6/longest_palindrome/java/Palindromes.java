@@ -21,13 +21,7 @@ public class Palindromes {
                 palindromeRadius++;
             }
         }
-        result.sort(new Comparator<String>() {
-            @Override
-            public int compare(String str1, String str2) {
-                return str1.length() - str2.length();
-            }
-        });
-
+        result.sort(Comparator.comparingInt(String::length));
         return result.get(result.size() - 1).length();
     }
 }
