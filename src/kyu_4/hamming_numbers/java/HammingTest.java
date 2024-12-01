@@ -1,4 +1,4 @@
-package kyu_4.hamming_numbers;
+package kyu_4.hamming_numbers.java;
 
 import org.junit.*;
 

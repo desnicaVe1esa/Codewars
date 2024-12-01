@@ -1,4 +1,4 @@
-package kyu_4.hamming_numbers;
+package kyu_4.hamming_numbers.java;
 
 public class Hamming {
     public static long hamming(int n) {
